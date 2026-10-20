@@ -1,0 +1,63 @@
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light;
+  --bg:#FFFFFF; --surface:#FFFFFF; --ink:#16103D; --muted:#5C5780; --line:#DAD5F5;
+  --brand:#2B1BD9; --pop:#FFE14D; --hot:#FF3D81; --hot-ink:#FFFFFF; --bar:#FFFFFF;
+}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Bricolage Grotesque",system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.5}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:#FF8A0A;z-index:10}
+.wrap{max-width:1040px;margin:0 auto;padding:0 16px}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--hot);outline-offset:2px}
+
+/* hero */
+.hero{background:linear-gradient(#FF8A0A,#FF6A00);color:#0A1F7C;padding:16px 0;position:relative}
+.hero .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{font-family:"Bowlby One","Arial Black",Impact,sans-serif;font-size:clamp(3.4rem,17vw,8rem);line-height:.9;margin:0;letter-spacing:-.02em;color:#fff;text-shadow:5px 5px 0 var(--hot)}
+.logo{margin:0}
+.logo img{display:block;width:min(44vw,200px);height:auto}
+.tag{font-size:clamp(1.05rem,3.4vw,1.35rem);font-weight:600;max-width:34ch;margin:22px 0 0}
+.cta{display:inline-block;background:var(--pop);color:#16103D;font-weight:800;font-size:.95rem;text-decoration:none;padding:11px 16px;text-align:center;border-radius:999px;border:3px solid #16103D;box-shadow:4px 4px 0 #16103D}
+.cta:active{transform:translate(2px,2px);box-shadow:2px 2px 0 #16103D}
+
+/* faixa */
+.strip{background:var(--pop);color:#16103D;border-block:3px solid #16103D;overflow:hidden;white-space:nowrap;font-weight:800}
+.strip div{display:inline-block;padding:9px 0;animation:run 28s linear infinite}
+.strip span{margin:0 22px}
+@keyframes run{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.strip div{animation:none}}
+
+/* barra de busca/categorias */
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bar);border-bottom:1.5px solid var(--line);padding:10px 0}
+.bar .wrap{display:flex;flex-direction:column;gap:10px}
+.search{width:100%;font:inherit;padding:12px 16px;border-radius:12px;border:2px solid var(--line);background:var(--surface);color:var(--ink)}
+.chips{display:flex;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.chip{flex:none;font:inherit;font-weight:800;padding:8px 16px;border-radius:999px;border:2px solid var(--ink);background:var(--surface);color:var(--ink);cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+
+/* produtos */
+.count{margin:22px 0 12px;font-weight:800;font-size:1.25rem}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;padding-bottom:36px}
+@media(min-width:700px){.grid{grid-template-columns:repeat(3,1fr);gap:18px}}
+@media(min-width:960px){.grid{grid-template-columns:repeat(4,1fr)}}
+.card{background:var(--surface);border:2px solid var(--ink);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;box-shadow:4px 4px 0 var(--ink)}
+.pic{aspect-ratio:1/1;display:grid;place-items:center;font-size:clamp(3.4rem,14vw,5rem);position:relative}
+.off{position:absolute;top:10px;left:10px;background:var(--hot);color:var(--hot-ink);font-weight:800;font-size:.9rem;padding:3px 10px;border-radius:999px;border:2px solid var(--ink)}
+.body{padding:12px;display:flex;flex-direction:column;gap:2px;flex:1}
+.name{font-weight:800;font-size:1rem;line-height:1.25;margin:0}
+.cat{color:var(--muted);font-size:.82rem}
+.old{color:var(--muted);text-decoration:line-through;font-size:.9rem;margin-top:8px}
+.price{font-size:1.6rem;font-weight:800;line-height:1.1}
+.price small{font-size:.85rem;font-weight:600}
+.buy{display:block;text-align:center;background:var(--hot);color:var(--hot-ink);text-decoration:none;font-weight:800;padding:12px 8px;border-radius:12px;border:2px solid var(--ink);margin-top:10px}
+.buy:active{transform:scale(.97)}
+.vazio{grid-column:1/-1;text-align:center;color:var(--muted);padding:40px 0}
+
+footer{background:var(--ink);color:var(--bg);padding:26px 0 32px;font-size:.9rem}
+.autor{display:flex;align-items:center;gap:12px;margin-top:18px;padding-top:16px;border-top:1.5px solid rgba(255,255,255,.2)}
+.autor img{width:48px;height:48px;border-radius:50%;object-fit:cover;border:2px solid var(--pop);flex:none}
+footer b{font-family:"Bowlby One","Arial Black",sans-serif;font-size:1.4rem;font-weight:400;display:block;margin-bottom:6px}
+
