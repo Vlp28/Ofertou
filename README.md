@@ -218,6 +218,6 @@ Por fim, volte em **Settings > Pages** e ative **Enforce HTTPS** quando a opçã
 <table>
   <tr>
     <td><img src="docs/autor.jpg" alt="Foto de Vinicius Levi Pereira" width="90"></td>
-    <td><strong>Vinicius Levi Pereira</strong><br>Quem fez o site</td>
+    <td><strong>Vinicius Levi Pereira</strong><br>Autor Do Projeto</td>
   </tr>
 </table>
