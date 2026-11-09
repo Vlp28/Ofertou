@@ -1,6 +1,6 @@
 # Ofertou Já
 
-Vitrine de achadinhos da Shopee com links de afiliado. É um site parado (HTML, CSS e JavaScript puro), sem servidor e sem banco de dados, feito para ser hospedado de graça no GitHub Pages.
+Vitrine de achadinhos (Shopee, Shein, Mercado Livre) com links de afiliado. É um site parado (HTML, CSS e JavaScript puro), sem servidor e sem banco de dados, feito para ser hospedado de graça no GitHub Pages.
 
 Endereço previsto: **ofertouja.com.br**
 
@@ -36,19 +36,19 @@ Endereço previsto: **ofertouja.com.br**
 
 ## O que o site faz
 
-- Mostra os produtos em cards, com foto (emoji por enquanto), nome, categoria, preço e botão **Comprar na Shopee**.
+- Mostra os produtos em cards, com foto (emoji por enquanto), nome, categoria, preço e botão **Comprar na [loja]**.
 - Mostra etiqueta de desconto (ex.: `-50%`) e o preço antigo riscado, quando o produto tem preço antigo cadastrado. A porcentagem é calculada sozinha.
 - Tem **busca** por nome e **botões de categoria** (Todos, Casa, Beleza...). As categorias aparecem sozinhas a partir da lista de produtos.
-- Barra de busca e categorias **fica fixa** no topo quando a pessoa rola a página.
+- A busca fica no alto, à esquerda, numa faixa amarela logo abaixo da faixa que corre. Os botões de categoria ficam fixos no topo quando a pessoa rola a página.
 - Topo laranja com o logo e o botão para entrar no grupo do WhatsApp.
-- Faixa amarela com frases de oferta passando (a animação é desligada para quem usa "reduzir movimento" no celular).
+- Faixa grande e colorida com frases de oferta correndo para a direita, e um boneco (original) correndo atrás (a animação é desligada para quem usa "reduzir movimento" no celular).
 - Layout que se adapta: 2 colunas no celular, 3 no tablet e 4 no computador.
 - Aviso de afiliado no rodapé.
 
 ## Como funciona o modelo de afiliado
 
 1. A pessoa vê o produto no site.
-2. Clica em **Comprar na Shopee** e vai para a Shopee pelo link de afiliado.
+2. Clica em **Comprar na [loja]** e vai para a loja pelo link de afiliado.
 3. Se ela comprar, o dono do site ganha uma comissão. A pessoa **não paga nada a mais** por isso.
 
 Por isso o preço mostrado no site deve ser **o mesmo da Shopee**. O preço antigo (`antes`) só deve ser preenchido quando for o preço real que aparece lá, para o desconto ser verdadeiro. Os preços da Shopee mudam sem aviso, então vale revisar a lista de tempos em tempos.
@@ -104,15 +104,58 @@ Cada produto tem estes campos:
 | `antes` | Preço antigo, **opcional**. Se apagar, some o desconto e o riscado | `79.90` |
 | `emoji` | Desenho do card, enquanto não tem foto | `"🎧"` |
 | `cor` | Cor de fundo do card, em hexadecimal | `"#BFD9FF"` |
-| `link` | Seu link de afiliado da Shopee | `"https://s.shopee.com.br/xxxx"` |
+| `loja` | De qual loja é o produto (aparece no card e no botão) | `"Shopee"` |
+| `link` | Seu link de afiliado | `"https://s.shopee.com.br/xxxx"` |
 
 Para **adicionar** um produto, copie uma linha inteira, cole embaixo e troque os valores. Cuidado com a vírgula no fim de cada linha, exceto a última.
 
 Para **remover**, apague a linha do produto.
 
-## Como trocar o link do grupo do WhatsApp
+## Como trocar o link do grupo e o destino dos botões
 
-No `index.html`, procure por `SEU-LINK-AQUI` e troque pelo link do convite do seu grupo. Aparece uma vez, no botão do topo.
+No começo do `script.js` ficam duas configurações:
+
+```js
+const LINK_GRUPO = "https://chat.whatsapp.com/SEU-LINK-AQUI";
+const MODO = "grupo";
+```
+
+- `LINK_GRUPO`: troque pelo link de convite do seu grupo do WhatsApp. Ele é usado no botão do topo e nos botões dos produtos.
+- `MODO`: define para onde os botões dos produtos levam.
+  - `"grupo"`: todos levam para o grupo (o botão fica escrito **Pegar no grupo**).
+  - `"loja"`: cada botão leva para o campo `link` do produto (o botão fica escrito **Comprar na Shopee**, **Comprar na Shein** etc., conforme o campo `loja`).
+
+Para passar do grupo para a Shopee depois, basta trocar `"grupo"` por `"loja"` e conferir se cada produto tem o seu link de afiliado.
+
+## Produtos próprios (3D)
+
+A parte **Nossos produtos 3D** fica abaixo dos achadinhos (que são o foco) e usa a lista `produtosProprios`, no começo do `script.js`.
+
+| Campo | O que é |
+|---|---|
+| `nome` | Nome do produto |
+| `desc` | Descrição curta |
+| `preco` | Preço, com ponto (ex.: `29.90`) |
+| `emoji` e `cor` | Desenho e cor do fundo, enquanto não tem foto |
+| `foto` | Caminho da foto (ex.: `"fotos3d/suporte.jpg"`, na pasta `fotos3d`). Se ficar `""`, usa o emoji |
+| `estoque` | Quantas unidades restam (opcional). De 1 a 5 aparece "Últimas unidades"; em `0` o botão vira **Esgotado**. O site não desconta sozinho: ao vender, diminua o número e sincronize |
+| `comprar` | Link de pagamento do produto. Se ficar `""`, usa o **Pagar com Pix** (se o `PIX` estiver preenchido) ou mostra **Em breve** |
+
+O site é parado (GitHub Pages), então ele não processa pagamento sozinho. Há dois caminhos:
+
+1. **Link de pagamento** (Mercado Pago, PagBank, InfinitePay...): crie o link de cada produto lá e cole no campo `comprar`.
+2. **Pix direto para você:** preencha `PIX` (chave, nome e cidade) no começo do `script.js`. Os produtos 3D sem link de pagamento ganham o botão **Pagar com Pix**, que abre uma janela com o QR code e o código "copia e cola" já com o valor. O dinheiro cai direto na sua conta, mas **a confirmação é manual**: confira no app do banco antes de enviar o pedido.
+
+A chave Pix fica visível para quem abrir o código do site. Prefira uma **chave aleatória** (criada no app do banco), e não CPF, telefone ou e-mail. `CONTATO_VENDAS` (link `https://wa.me/55...`) mostra o botão "Enviar comprovante".
+
+## Lista de produtos automática (produtos.json)
+
+O site lê o arquivo `produtos.json`. Quem escreve nele é o **robô do WhatsApp** (pasta `robo-ofertou`, fora deste repositório), que lê o grupo e atualiza o arquivo e a pasta `fotos/` pela API do GitHub.
+
+- Com o `produtos.json` vazio, o site mostra "Os achadinhos de hoje estão chegando!".
+- A lista de exemplo do `script.js` só aparece se o `produtos.json` não puder ser lido (por exemplo, abrindo o `index.html` direto no computador).
+- Para cadastrar produtos na mão, edite a lista `produtos` no `script.js` **e apague o `produtos.json`**, ou escreva os produtos dentro do próprio `produtos.json`.
+- Depois que o robô estiver rodando, antes de dar **Sincronizar Alterações** no VS Code, o Git vai trazer as mudanças dele (`produtos.json` e `fotos/`) para o seu computador. Isso é normal.
 
 ## Como mudar cores e visual
 
@@ -202,14 +245,15 @@ Por fim, volte em **Settings > Pages** e ative **Enforce HTTPS** quando a opçã
 - **O repositório é público.** Qualquer pessoa pode ler o código. Nunca coloque senha, chave de API ou dados de login do WhatsApp nele. O `.gitignore` já bloqueia os nomes mais comuns, mas confira antes de subir.
 - **Os links de afiliado aparecem no site** de qualquer jeito, então não há problema neles estarem no código.
 - **O GitHub Pages serve só arquivos parados.** Não roda robô nem servidor.
-- **Marca registrada:** o site cita a Shopee. Leia as regras do programa de afiliados sobre o uso do nome e do logo deles.
-- **Preços:** a Shopee muda preço e estoque sem aviso. Revise a lista de vez em quando.
+- **Marca registrada:** o site cita Shopee, Shein e Mercado Livre. Leia as regras do programa de afiliados sobre o uso do nome e do logo deles.
+- **Preços:** as lojas mudam preço e estoque sem aviso. Revise a lista de vez em quando.
 
 ## Próximos passos
 
-- [ ] Colocar o link real do grupo do WhatsApp
+- [ ] Colocar o link real do grupo do WhatsApp em `LINK_GRUPO`
 - [ ] Trocar os produtos de exemplo pelos produtos reais
 - [ ] Trocar os emojis por fotos dos produtos
+- [ ] Mudar `MODO` para `"loja"` quando os links de afiliado estiverem prontos
 - [ ] Ligar o domínio `ofertouja.com.br`
 - [ ] Criar um robô que lê as postagens do grupo e atualiza a lista de produtos sozinho (rodando em um servidor ou computador à parte, não no GitHub Pages)
 
@@ -218,6 +262,6 @@ Por fim, volte em **Settings > Pages** e ative **Enforce HTTPS** quando a opçã
 <table>
   <tr>
     <td><img src="docs/autor.jpg" alt="Foto de Vinicius Levi Pereira" width="90"></td>
-    <td><strong>Vinicius Levi Pereira</strong><br>Autor Do Projeto</td>
+    <td><strong>Vinicius Levi Pereira</strong><br>Quem fez o site</td>
   </tr>
 </table>

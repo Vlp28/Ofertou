@@ -4,6 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Ofertou Já</title>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Bricolage+Grotesque:wght@400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -13,37 +16,127 @@
 <header class="hero">
   <div class="wrap">
     <h1 class="logo"><img src="logo.png" alt="Ofertou Já" width="720" height="333"></h1>
-    <!-- TROQUE pelo link do seu grupo -->
-    <a class="cta" href="https://chat.whatsapp.com/SEU-LINK-AQUI">Entrar no grupo</a>
+    <!-- O link do grupo é definido no script.js (LINK_GRUPO) -->
+    <a class="cta" id="cta-grupo" href="#">Entrar no grupo</a>
   </div>
 </header>
 
 <div class="strip" aria-hidden="true"><div>
-  <span>Ofertas novas todo dia</span><span>Clicou, comprou, chegou</span><span>Entra no grupo e não perde nada</span><span>Ofertou!</span>
-  <span>Ofertas novas todo dia</span><span>Clicou, comprou, chegou</span><span>Entra no grupo e não perde nada</span><span>Ofertou!</span>
+  <i class="corre"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M26 17L34 18L29 32L21 30Z" fill="#FF7A00"/><circle cx="29" cy="11" r="6" fill="#FFC9A3"/><path d="M23 10Q24 3 31 4Q36 5 35.5 10Z" fill="#FF3D81"/><path d="M34 9L42 10.5Q42 12.5 34 12.5Z" fill="#FFE14D"/><circle cx="32" cy="10.5" r="1.1" fill="#16103D"/><rect x="38" y="21" width="9" height="10" rx="2" fill="#22C55E"/><path d="M40 21Q42.5 14 45 21" stroke="#22C55E" stroke-width="1.8"/><g class="pa"><path d="M31 19L38 24L41 19M29 19L22 21L19 26" stroke="#FFC9A3" stroke-width="3.6"/><path d="M25 31L33 35L34 43M25 31L19 37L12 36" stroke="#2B6BFF" stroke-width="5"/><circle cx="34.5" cy="44" r="3" fill="#FFE14D" stroke="none"/><circle cx="10.5" cy="36" r="3" fill="#FFE14D" stroke="none"/></g><g class="pb"><path d="M31 19L37 22L41 19M29 19L23 24L20 30" stroke="#FFC9A3" stroke-width="3.6"/><path d="M25 31L31 37L27 43M25 31L17 34L13 40" stroke="#2B6BFF" stroke-width="5"/><circle cx="26.5" cy="44.5" r="3" fill="#FFE14D" stroke="none"/><circle cx="12.5" cy="41.5" r="3" fill="#FFE14D" stroke="none"/></g></svg></i><span>Ofertas novas todo dia</span><span>Clicou, comprou, chegou</span><span>Entra no grupo e não perde nada</span><span>Ofertou!</span>
+  <i class="corre"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M26 17L34 18L29 32L21 30Z" fill="#FF7A00"/><circle cx="29" cy="11" r="6" fill="#FFC9A3"/><path d="M23 10Q24 3 31 4Q36 5 35.5 10Z" fill="#FF3D81"/><path d="M34 9L42 10.5Q42 12.5 34 12.5Z" fill="#FFE14D"/><circle cx="32" cy="10.5" r="1.1" fill="#16103D"/><rect x="38" y="21" width="9" height="10" rx="2" fill="#22C55E"/><path d="M40 21Q42.5 14 45 21" stroke="#22C55E" stroke-width="1.8"/><g class="pa"><path d="M31 19L38 24L41 19M29 19L22 21L19 26" stroke="#FFC9A3" stroke-width="3.6"/><path d="M25 31L33 35L34 43M25 31L19 37L12 36" stroke="#2B6BFF" stroke-width="5"/><circle cx="34.5" cy="44" r="3" fill="#FFE14D" stroke="none"/><circle cx="10.5" cy="36" r="3" fill="#FFE14D" stroke="none"/></g><g class="pb"><path d="M31 19L37 22L41 19M29 19L23 24L20 30" stroke="#FFC9A3" stroke-width="3.6"/><path d="M25 31L31 37L27 43M25 31L17 34L13 40" stroke="#2B6BFF" stroke-width="5"/><circle cx="26.5" cy="44.5" r="3" fill="#FFE14D" stroke="none"/><circle cx="12.5" cy="41.5" r="3" fill="#FFE14D" stroke="none"/></g></svg></i><span>Ofertas novas todo dia</span><span>Clicou, comprou, chegou</span><span>Entra no grupo e não perde nada</span><span>Ofertou!</span>
+  <i class="corre"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M26 17L34 18L29 32L21 30Z" fill="#FF7A00"/><circle cx="29" cy="11" r="6" fill="#FFC9A3"/><path d="M23 10Q24 3 31 4Q36 5 35.5 10Z" fill="#FF3D81"/><path d="M34 9L42 10.5Q42 12.5 34 12.5Z" fill="#FFE14D"/><circle cx="32" cy="10.5" r="1.1" fill="#16103D"/><rect x="38" y="21" width="9" height="10" rx="2" fill="#22C55E"/><path d="M40 21Q42.5 14 45 21" stroke="#22C55E" stroke-width="1.8"/><g class="pa"><path d="M31 19L38 24L41 19M29 19L22 21L19 26" stroke="#FFC9A3" stroke-width="3.6"/><path d="M25 31L33 35L34 43M25 31L19 37L12 36" stroke="#2B6BFF" stroke-width="5"/><circle cx="34.5" cy="44" r="3" fill="#FFE14D" stroke="none"/><circle cx="10.5" cy="36" r="3" fill="#FFE14D" stroke="none"/></g><g class="pb"><path d="M31 19L37 22L41 19M29 19L23 24L20 30" stroke="#FFC9A3" stroke-width="3.6"/><path d="M25 31L31 37L27 43M25 31L17 34L13 40" stroke="#2B6BFF" stroke-width="5"/><circle cx="26.5" cy="44.5" r="3" fill="#FFE14D" stroke="none"/><circle cx="12.5" cy="41.5" r="3" fill="#FFE14D" stroke="none"/></g></svg></i><span>Ofertas novas todo dia</span><span>Clicou, comprou, chegou</span><span>Entra no grupo e não perde nada</span><span>Ofertou!</span>
+  <i class="corre"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M26 17L34 18L29 32L21 30Z" fill="#FF7A00"/><circle cx="29" cy="11" r="6" fill="#FFC9A3"/><path d="M23 10Q24 3 31 4Q36 5 35.5 10Z" fill="#FF3D81"/><path d="M34 9L42 10.5Q42 12.5 34 12.5Z" fill="#FFE14D"/><circle cx="32" cy="10.5" r="1.1" fill="#16103D"/><rect x="38" y="21" width="9" height="10" rx="2" fill="#22C55E"/><path d="M40 21Q42.5 14 45 21" stroke="#22C55E" stroke-width="1.8"/><g class="pa"><path d="M31 19L38 24L41 19M29 19L22 21L19 26" stroke="#FFC9A3" stroke-width="3.6"/><path d="M25 31L33 35L34 43M25 31L19 37L12 36" stroke="#2B6BFF" stroke-width="5"/><circle cx="34.5" cy="44" r="3" fill="#FFE14D" stroke="none"/><circle cx="10.5" cy="36" r="3" fill="#FFE14D" stroke="none"/></g><g class="pb"><path d="M31 19L37 22L41 19M29 19L23 24L20 30" stroke="#FFC9A3" stroke-width="3.6"/><path d="M25 31L31 37L27 43M25 31L17 34L13 40" stroke="#2B6BFF" stroke-width="5"/><circle cx="26.5" cy="44.5" r="3" fill="#FFE14D" stroke="none"/><circle cx="12.5" cy="41.5" r="3" fill="#FFE14D" stroke="none"/></g></svg></i><span>Ofertas novas todo dia</span><span>Clicou, comprou, chegou</span><span>Entra no grupo e não perde nada</span><span>Ofertou!</span>
 </div></div>
 
-<div class="bar"><div class="wrap">
+<!-- Busca: fica numa faixa amarela, logo abaixo da faixa que corre, para aparecer bem -->
+<div class="busca-faixa"><div class="wrap">
   <input class="search" id="busca" type="search" placeholder="Buscar produto…" aria-label="Buscar produto">
+</div></div>
+
+<div class="achados">
+<div class="bar"><div class="wrap">
   <div class="chips" id="chips" role="group" aria-label="Categorias"></div>
 </div></div>
 
 <main class="wrap">
-  <p class="tag">Achadinhos da Shopee com preço bom, escolhidos a dedo.</p>
+  <p class="tag">Achadinhos de Shopee, Shein e Mercado Livre com preço bom, escolhidos a dedo.</p>
   <h2 class="count" id="count"></h2>
   <div class="grid" id="grid"></div>
 </main>
+</div>
+
+<section class="wrap proprios" aria-labelledby="t3d">
+  <h2 class="sec" id="t3d">Nossos produtos 3D</h2>
+  <p class="sec-sub">Feitos por nós, impressos em 3D.</p>
+  <div class="grid" id="grid3d"></div>
+</section>
 
 <footer><div class="wrap">
   <b>Ofertou Já</b>
-  Este site usa links de afiliado da Shopee: se você comprar por eles, eu ganho uma comissão, sem pagar nada a mais por isso. Os preços são os da Shopee e podem mudar sem aviso.
-  <div class="autor">
-    <img src="docs/autor.jpg" alt="Foto de Vinicius Levi Pereira" width="48" height="48">
-    <span>Site feito por <strong>Vinicius Levi Pereira</strong></span>
-  </div>
+  Os achadinhos usam links de afiliado das lojas (Shopee, Shein, Mercado Livre e outras): se você comprar por eles, nós ganhamos uma comissão, sem pagar nada a mais por isso. Os preços são os das lojas e podem mudar sem aviso. Os produtos 3D são feitos e vendidos por nós.
 </div></footer>
 
 
+<!-- Janela de pagamento por Pix (produtos 3D) -->
+<div class="modal" id="modal-pix" hidden role="dialog" aria-modal="true" aria-labelledby="pix-titulo">
+  <div class="modal-caixa">
+    <button type="button" class="modal-fechar" id="pix-fechar" aria-label="Fechar">×</button>
+    <h3 id="pix-titulo"></h3>
+    <p class="pix-valor" id="pix-valor"></p>
+    <div class="pix-qr" id="pix-qr"></div>
+    <label class="pix-rot" for="pix-codigo">Pix copia e cola</label>
+    <textarea id="pix-codigo" readonly rows="5"></textarea>
+    <button type="button" class="buy own" id="pix-copiar">Copiar código Pix</button>
+    <p class="pix-aviso">Pague pelo app do seu banco (escaneando o QR code ou colando o código). Depois toque em Enviar comprovante: a mensagem já vai com o seu endereço. O pedido é confirmado quando o pagamento aparecer na nossa conta.</p>
+    <a class="buy" id="pix-contato" href="#" target="_blank" rel="noopener" hidden>Enviar comprovante</a>
+  </div>
+</div>
+
+<!-- Janela de dados de entrega (abre antes do pagamento dos produtos 3D) -->
+<div class="modal" id="modal-entrega" hidden role="dialog" aria-modal="true" aria-labelledby="ent-titulo">
+  <div class="modal-caixa modal-larga">
+    <button type="button" class="modal-fechar" id="ent-fechar" aria-label="Fechar">×</button>
+
+    <div id="ent-painel-form">
+      <h3 id="ent-titulo">Endereço de entrega</h3>
+      <p class="ent-prod" id="ent-prod"></p>
+      <form id="form-entrega" autocomplete="on">
+        <div class="ent-grid">
+          <label class="full">Nome completo
+            <input id="ent-nome" name="name" autocomplete="name" required>
+          </label>
+          <label class="full">WhatsApp (com DDD)
+            <input id="ent-tel" name="tel" type="tel" inputmode="tel" autocomplete="tel" placeholder="(11) 91234-5678" required minlength="10">
+          </label>
+          <label>CEP
+            <input id="ent-cep" name="cep" inputmode="numeric" autocomplete="postal-code" placeholder="00000-000" maxlength="9" required pattern="[0-9]{5}-?[0-9]{3}">
+          </label>
+          <span class="ent-status" id="ent-status" aria-live="polite"></span>
+          <label class="full">Rua / Avenida
+            <input id="ent-rua" name="rua" autocomplete="address-line1" required>
+          </label>
+          <label>Número
+            <input id="ent-num" name="numero" placeholder="123 ou S/N" required>
+          </label>
+          <label>Complemento
+            <input id="ent-compl" name="compl" placeholder="Casa, apto 12, bloco B">
+          </label>
+          <label class="full">Bairro
+            <input id="ent-bairro" name="bairro" required>
+          </label>
+          <label>Cidade
+            <input id="ent-cidade" name="cidade" autocomplete="address-level2" required>
+          </label>
+          <label>Estado
+            <select id="ent-uf" name="uf" autocomplete="address-level1" required>
+              <option value="">UF</option>
+              <option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option><option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option><option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option><option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option><option>SE</option><option>TO</option>
+            </select>
+          </label>
+          <label class="full">Ponto de referência (opcional)
+            <input id="ent-ref" name="ref" placeholder="Ex.: portão azul, perto da padaria">
+          </label>
+        </div>
+        <button type="submit" class="buy own" id="ent-continuar">Continuar para o pagamento</button>
+        <p class="pix-aviso">Seus dados vão só na mensagem do WhatsApp para a gente. O site não guarda nada.</p>
+      </form>
+    </div>
+
+    <div id="ent-painel-cartao" hidden>
+      <h3>Falta pouco!</h3>
+      <p class="ent-prod" id="ent-prod2"></p>
+      <ol class="ent-passos">
+        <li>Pague no cartão. O pagamento abre em outra aba.</li>
+        <li>Depois de pagar, volte aqui e envie o comprovante e o endereço no WhatsApp.</li>
+      </ol>
+      <a class="buy own" id="ent-pagar-cartao" href="#" target="_blank" rel="noopener">1. Pagar com cartão</a>
+      <a class="buy" id="ent-whats" href="#" target="_blank" rel="noopener" hidden>2. Enviar comprovante e endereço</a>
+      <button type="button" class="ent-corrigir" id="ent-corrigir">Corrigir o endereço</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
