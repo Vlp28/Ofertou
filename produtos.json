@@ -1,6 +1,19 @@
 {
-  "atualizado": "2026-11-10T23:03:50.307Z",
+  "atualizado": "2026-11-10T23:23:50.666Z",
   "produtos": [
+    {
+      "id": "mwbb54jwp85",
+      "nome": "Tripé Profissional 2.1m + Suporte Para Celular Câmera",
+      "cat": "Eletrônicos",
+      "preco": 35.97,
+      "emoji": "🎧",
+      "cor": "#BFD9FF",
+      "foto": "fotos/mwbb54jwp85.jpg",
+      "loja": "Mercado Livre",
+      "link": "https://meli.la/2coWRoj",
+      "data": "2026-11-10T23:14:47.756Z",
+      "antes": 69.9
+    },
     {
       "id": "mwbaoekkb1d",
       "nome": "Clima natalino pra deixar tudo mais aconchegante",
