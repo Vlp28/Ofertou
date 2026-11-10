@@ -1,0 +1,42 @@
+{
+  "atualizado": "2026-11-10T22:43:54.122Z",
+  "produtos": [
+    {
+      "id": "mwb9whrtd1t",
+      "nome": "56% OFF",
+      "cat": "Casa",
+      "preco": 20.88,
+      "emoji": "🧺",
+      "cor": "#FFD9A8",
+      "foto": "fotos/mwb9whrtd1t.jpg",
+      "loja": "Shopee",
+      "link": "https://s.shopee.com.br/8fTpU7EYGm",
+      "data": "2026-11-10T22:40:05.369Z"
+    },
+    {
+      "id": "mwb9tj3tw39",
+      "nome": "61% OFF",
+      "cat": "Casa",
+      "preco": 25.88,
+      "emoji": "🧺",
+      "cor": "#FFD9A8",
+      "foto": "fotos/mwb9tj3tw39.jpg",
+      "loja": "Shopee",
+      "link": "https://s.shopee.com.br/9zzD4Z9TYu",
+      "data": "2026-11-10T22:37:47.129Z"
+    },
+    {
+      "id": "mwb9qww11z3",
+      "nome": "Um cantinho de fé e charme",
+      "cat": "Casa",
+      "preco": 14,
+      "emoji": "🧺",
+      "cor": "#FFD9A8",
+      "foto": "fotos/mwb9qww11z3.jpg",
+      "loja": "Shopee",
+      "link": "https://s.shopee.com.br/8VAP8fflim",
+      "data": "2026-11-10T22:35:45.025Z",
+      "antes": 29.79
+    }
+  ]
+}
