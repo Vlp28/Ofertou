@@ -1,6 +1,19 @@
 {
-  "atualizado": "2026-11-10T23:23:50.666Z",
+  "atualizado": "2026-11-10T23:33:50.330Z",
   "produtos": [
+    {
+      "id": "mwbblur1x9o",
+      "nome": "Geladeira mais fácil de limpar",
+      "cat": "Casa",
+      "preco": 19,
+      "emoji": "🧺",
+      "cor": "#FFD9A8",
+      "foto": "fotos/mwbblur1x9o.jpg",
+      "loja": "Shopee",
+      "link": "https://s.shopee.com.br/1gK51RpRU1",
+      "data": "2026-11-10T23:27:48.205Z",
+      "antes": 38
+    },
     {
       "id": "mwbb54jwp85",
       "nome": "Tripé Profissional 2.1m + Suporte Para Celular Câmera",
