@@ -1,6 +1,19 @@
 {
-  "atualizado": "2026-11-10T22:43:54.122Z",
+  "atualizado": "2026-11-10T22:53:50.006Z",
   "produtos": [
+    {
+      "id": "mwba7qhgdpw",
+      "nome": "3x Carteira Cripto 24w - Cold Wallet Inox 304 - 24 Palavras",
+      "cat": "Achados",
+      "preco": 59.6,
+      "emoji": "🛍️",
+      "cor": "#C8F2DA",
+      "foto": "fotos/mwba7qhgdpw.jpg",
+      "loja": "Mercado Livre",
+      "link": "https://meli.la/1heYpxR",
+      "data": "2026-11-10T22:48:49.876Z",
+      "antes": 149
+    },
     {
       "id": "mwb9whrtd1t",
       "nome": "56% OFF",
