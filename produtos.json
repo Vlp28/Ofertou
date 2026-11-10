@@ -1,6 +1,19 @@
 {
-  "atualizado": "2026-11-10T22:53:50.006Z",
+  "atualizado": "2026-11-10T23:03:50.307Z",
   "produtos": [
+    {
+      "id": "mwbaoekkb1d",
+      "nome": "Clima natalino pra deixar tudo mais aconchegante",
+      "cat": "Eletrônicos",
+      "preco": 38.69,
+      "emoji": "🎧",
+      "cor": "#BFD9FF",
+      "foto": "fotos/mwbaoekkb1d.jpg",
+      "loja": "Shopee",
+      "link": "https://s.shopee.com.br/AUvTHUwgKd",
+      "data": "2026-11-10T23:01:47.588Z",
+      "antes": 66.71
+    },
     {
       "id": "mwba7qhgdpw",
       "nome": "3x Carteira Cripto 24w - Cold Wallet Inox 304 - 24 Palavras",
