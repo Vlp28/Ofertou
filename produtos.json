@@ -1,6 +1,19 @@
 {
-  "atualizado": "2026-11-10T23:43:49.753Z",
+  "atualizado": "2026-11-11T00:03:49.945Z",
   "produtos": [
+    {
+      "id": "mwbcjdkxh27",
+      "nome": "Canos livres sem estresse",
+      "cat": "Casa",
+      "preco": 9.9,
+      "emoji": "🧺",
+      "cor": "#FFD9A8",
+      "foto": "fotos/mwbcjdkxh27.jpg",
+      "loja": "Shopee",
+      "link": "https://s.shopee.com.br/3LSImp4ruZ",
+      "data": "2026-11-10T23:53:52.257Z",
+      "antes": 19.8
+    },
     {
       "id": "mwbc2ogcq7z",
       "nome": "Decoração De Natal Pisca Pisca E Cascata Cordão De Luzes LED Estrelas…",
