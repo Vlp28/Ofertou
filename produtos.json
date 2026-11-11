@@ -1,6 +1,19 @@
 {
-  "atualizado": "2026-11-11T00:33:50.226Z",
+  "atualizado": "2026-11-11T00:53:50.203Z",
   "produtos": [
+    {
+      "id": "mwbee95rwit",
+      "nome": "Mais diversão na água para a criançada",
+      "cat": "Infantil",
+      "preco": 37.52,
+      "emoji": "🧸",
+      "cor": "#FFF0A6",
+      "foto": "fotos/mwbee95rwit.jpg",
+      "loja": "Mercado Livre",
+      "link": "https://meli.la/1QHPrkN",
+      "data": "2026-11-11T00:45:52.479Z",
+      "antes": 159.9
+    },
     {
       "id": "mwbdxj2pt71",
       "nome": "1kg De Pedra Brasileira Rolada Natural Mista Cristal Atacado",
