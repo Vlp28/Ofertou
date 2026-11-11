@@ -1,6 +1,19 @@
 {
-  "atualizado": "2026-11-11T00:23:50.196Z",
+  "atualizado": "2026-11-11T00:33:50.226Z",
   "produtos": [
+    {
+      "id": "mwbdxj2pt71",
+      "nome": "1kg De Pedra Brasileira Rolada Natural Mista Cristal Atacado",
+      "cat": "Achados",
+      "preco": 32.5,
+      "emoji": "🛍️",
+      "cor": "#C8F2DA",
+      "foto": "fotos/mwbdxj2pt71.jpg",
+      "loja": "Mercado Livre",
+      "link": "https://meli.la/2QV8bH8",
+      "data": "2026-11-11T00:32:52.177Z",
+      "antes": 75
+    },
     {
       "id": "mwbdgt8e7x2",
       "nome": "Cortina arrumadinha sem complicação",
