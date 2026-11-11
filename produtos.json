@@ -1,6 +1,19 @@
 {
-  "atualizado": "2026-11-11T00:13:50.041Z",
+  "atualizado": "2026-11-11T00:23:50.196Z",
   "produtos": [
+    {
+      "id": "mwbdgt8e7x2",
+      "nome": "Cortina arrumadinha sem complicação",
+      "cat": "Casa",
+      "preco": 13.18,
+      "emoji": "🧺",
+      "cor": "#FFD9A8",
+      "foto": "fotos/mwbdgt8e7x2.jpg",
+      "loja": "Shopee",
+      "link": "https://s.shopee.com.br/1BNoIWKWAw",
+      "data": "2026-11-11T00:19:52.190Z",
+      "antes": 42.52
+    },
     {
       "id": "mwbd01uhg2k",
       "nome": "Lencol Padrão, Queen, King 400 Fios Micropercal Jogo De Cama Casal 03…",
