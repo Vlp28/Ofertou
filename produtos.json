@@ -1,6 +1,19 @@
 {
-  "atualizado": "2026-11-11T00:03:49.945Z",
+  "atualizado": "2026-11-11T00:13:50.041Z",
   "produtos": [
+    {
+      "id": "mwbd01uhg2k",
+      "nome": "Lencol Padrão, Queen, King 400 Fios Micropercal Jogo De Cama Casal 03…",
+      "cat": "Casa",
+      "preco": 28.9,
+      "emoji": "🧺",
+      "cor": "#FFD9A8",
+      "foto": "fotos/mwbd01uhg2k.jpg",
+      "loja": "Shopee",
+      "link": "https://s.shopee.com.br/6q2BJamr0v",
+      "data": "2026-11-11T00:06:50.201Z",
+      "antes": 68.81
+    },
     {
       "id": "mwbcjdkxh27",
       "nome": "Canos livres sem estresse",
