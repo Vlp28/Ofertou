@@ -1,6 +1,19 @@
 {
-  "atualizado": "2026-11-16T18:13:26.745Z",
+  "atualizado": "2026-11-16T18:23:23.047Z",
   "produtos": [
+    {
+      "id": "mwjl44qs3dw",
+      "nome": "Caimento largo pra mandar no look",
+      "cat": "Moda",
+      "preco": 59,
+      "emoji": "👕",
+      "cor": "#D9CCFF",
+      "foto": "fotos/mwjl44qs3dw.jpg",
+      "loja": "Shopee",
+      "link": "https://s.shopee.com.br/1W0nxlfHuO",
+      "data": "2026-11-16T18:16:06.916Z",
+      "antes": 151.28
+    },
     {
       "id": "mwjkowprokx",
       "nome": "Kit Quadro Decorativo Depilação 3 Peças Estética Beleza Spa…",
