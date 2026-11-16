@@ -1,6 +1,45 @@
 {
-  "atualizado": "2026-11-11T00:53:50.203Z",
+  "atualizado": "2026-11-16T18:13:26.745Z",
   "produtos": [
+    {
+      "id": "mwjkowprokx",
+      "nome": "Kit Quadro Decorativo Depilação 3 Peças Estética Beleza Spa…",
+      "cat": "Achados",
+      "preco": 59.9,
+      "emoji": "🛍️",
+      "cor": "#C8F2DA",
+      "foto": "fotos/mwjkowprokx.jpg",
+      "loja": "Mercado Livre",
+      "link": "https://meli.la/1i5zGyQ",
+      "data": "2026-11-16T18:04:16.671Z",
+      "antes": 179.7
+    },
+    {
+      "id": "mwjkoxensnj",
+      "nome": "Camisa Jogador Palmeiras Puma Ill 26/27 Azul Masculino Azul Jogador M",
+      "cat": "Moda",
+      "preco": 193,
+      "emoji": "👕",
+      "cor": "#D9CCFF",
+      "foto": "fotos/mwjkoxensnj.jpg",
+      "loja": "Mercado Livre",
+      "link": "https://meli.la/2drJgvR",
+      "data": "2026-11-16T18:04:17.567Z",
+      "antes": 479
+    },
+    {
+      "id": "mwjkowtayhk",
+      "nome": "Tudo organizado pra encarar o dia",
+      "cat": "Moda",
+      "preco": 99.99,
+      "emoji": "👕",
+      "cor": "#D9CCFF",
+      "foto": "fotos/mwjkowtayhk.jpg",
+      "loja": "Shopee",
+      "link": "https://s.shopee.com.br/5q9nEMv6FT",
+      "data": "2026-11-16T18:04:16.798Z",
+      "antes": 294.09
+    },
     {
       "id": "mwbee95rwit",
       "nome": "Mais diversão na água para a criançada",
